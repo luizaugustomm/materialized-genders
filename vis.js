@@ -23,7 +23,7 @@ d3.csv('dados.csv', function(error, data) {
 
     var gender = d3.scaleOrdinal()
         .domain(keys)
-        .range(['indigo', 'mediumaquamarine']);
+        .range(['.mulheres', '.homens']);
 
     var svg = d3.select('#vis').append('svg')
         .attr('version', '1.1')
@@ -39,7 +39,7 @@ d3.csv('dados.csv', function(error, data) {
         .data(d3.stack().keys(keys)(newData))
         .enter()
         .append('g')
-            .attr('fill', d => gender(d.key))
+            .attr('class', d => gender(d.key))
         .selectAll('rect')
         .data(d => d)
         .enter()
