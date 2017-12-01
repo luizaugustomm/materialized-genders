@@ -3,3 +3,11 @@
     font-size: 130%;
     color: #777;
 }
+
+#vis .homens {
+    fill: mediumaquamarine;
+}
+
+#vis .mulheres {
+    fill: indigo;
+}
