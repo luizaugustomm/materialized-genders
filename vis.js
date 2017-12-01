@@ -23,7 +23,7 @@ d3.csv('dados.csv', function(error, data) {
 
     var gender = d3.scaleOrdinal()
         .domain(keys)
-        .range(['.mulheres', '.homens']);
+        .range(['mulheres', 'homens']);
 
     var svg = d3.select('#vis').append('svg')
         .attr('version', '1.1')
